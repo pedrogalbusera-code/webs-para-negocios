@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heladería Desire · Heladería artesanal en Ituzaingó desde 1986</title>
+<meta name="description" content="Heladería artesanal en Ituzaingó desde 1986. 65 gustos, apto celíacos sin TACC, tortas y postres helados. 4.6★ con 4.412 reseñas. Pedí online o al (011) 4458-1565.">
+<meta name="theme-color" content="#3a2318">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://www.heladeriadesire.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Heladería Desire">
+<meta property="og:title" content="Heladería Desire · Artesanal en Ituzaingó desde 1986">
+<meta property="og:description" content="40 años endulzando Ituzaingó. 65 gustos artesanales, apto celíacos sin TACC, tortas y postres. 4.6★ · 4.412 reseñas. Pedí online o por teléfono.">
+<meta property="og:locale" content="es_AR">
+<meta property="og:url" content="https://www.heladeriadesire.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Heladería Desire · Artesanal en Ituzaingó desde 1986">
+<meta name="twitter:description" content="40 años endulzando Ituzaingó. 65 gustos, sin TACC, tortas y postres. 4.6★ · 4.412 reseñas.">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   HELADERÍA DESIRE — variables de marca
+   Paleta provisional de heladería artesanal. Ajustar al logo
+   real cambiando SOLO estos valores.
+   ============================================================ */
+:root{
+  --crema:#fbf5ea;         /* fondo vainilla */
+  --crema-2:#f4e9d6;       /* crema más saturada para tarjetas */
+  --dulce:#7a4a24;         /* marrón dulce de leche — titulares */
+  --dulce-oscuro:#3a2318;  /* marrón profundo — texto fuerte / footer */
+  --frambuesa:#c1213f;     /* acento frutal — CTAs */
+  --frambuesa-osc:#9c1631; /* hover del acento */
+  --crema-borde:#e7d7bd;   /* bordes suaves */
+  --texto:#4a3a2c;         /* cuerpo */
+  --texto-suave:#7a6a58;   /* secundario */
+  --dorado:#c99a4e;        /* detalle retro cinta / estrella */
+  --verde:#4c7a52;         /* acento sin TACC / sin azúcar */
+  --blanco:#ffffff;
+
+  --serif:'Fraunces',Georgia,'Times New Roman',serif;
+  --sans:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+
+  --radio:16px;
+  --radio-lg:26px;
+  --sombra:0 10px 30px rgba(58,35,24,.10);
+  --sombra-fuerte:0 18px 44px rgba(58,35,24,.18);
+  --max:1120px;
+  --gap:clamp(3.5rem,8vw,7rem);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:var(--sans);
+  color:var(--texto);
+  background:var(--crema);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+h1,h2,h3{font-family:var(--serif);color:var(--dulce);line-height:1.12;margin:0;font-weight:600}
+h1{font-size:clamp(2.1rem,7vw,4.1rem);letter-spacing:-.5px}
+h2{font-size:clamp(1.7rem,5vw,2.9rem);letter-spacing:-.3px}
+h3{font-size:clamp(1.15rem,3.5vw,1.5rem)}
+p{margin:0 0 1rem}
+
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 clamp(1.1rem,5vw,2.2rem)}
+section{padding:var(--gap) 0}
+.eyebrow{
+  font-family:var(--sans);font-weight:700;text-transform:uppercase;
+  letter-spacing:.18em;font-size:.72rem;color:var(--frambuesa);
+  margin-bottom:.9rem;display:block;
+}
+
+/* ---------- Botones ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  font-family:var(--sans);font-weight:700;font-size:1rem;
+  padding:.95rem 1.6rem;border-radius:100px;text-decoration:none;
+  border:2px solid transparent;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease,background .18s ease;
+  line-height:1;
+}
+.btn-primario{background:var(--frambuesa);color:#fff;box-shadow:0 8px 20px rgba(193,33,63,.32)}
+.btn-primario:hover{background:var(--frambuesa-osc);transform:translateY(-2px);box-shadow:0 12px 26px rgba(193,33,63,.4)}
+.btn-secundario{background:transparent;color:var(--dulce);border-color:var(--dulce)}
+.btn-secundario:hover{background:var(--dulce);color:var(--crema);transform:translateY(-2px)}
+.btn-crema{background:var(--crema);color:var(--dulce);border-color:var(--crema-borde)}
+.btn-crema:hover{background:#fff;transform:translateY(-2px)}
+
+/* ---------- Cinta / sello ---------- */
+.sello{
+  display:inline-flex;align-items:center;gap:.55rem;
+  background:var(--dulce-oscuro);color:var(--crema);
+  font-family:var(--sans);font-weight:700;font-size:.78rem;
+  letter-spacing:.12em;text-transform:uppercase;
+  padding:.5rem 1rem;border-radius:100px;
+  border:1px solid rgba(201,154,78,.5);
+}
+.sello .punto{width:7px;height:7px;border-radius:50%;background:var(--dorado)}
+
+/* ---------- Prueba social ---------- */
+.estrellas{color:var(--dorado);letter-spacing:2px;font-size:1rem}
+.social-proof{
+  display:inline-flex;align-items:center;gap:.6rem;flex-wrap:wrap;
+  font-size:.95rem;color:var(--texto-suave);font-weight:500;
+}
+.social-proof strong{color:var(--dulce-oscuro)}
+
+/* ---------- Placeholder de foto ---------- */
+.foto{
+  background:
+    repeating-linear-gradient(135deg,var(--crema-2),var(--crema-2) 14px,#efe2c9 14px,#efe2c9 28px);
+  border:1px dashed var(--dulce);border-radius:var(--radio);
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  color:var(--dulce);font-family:var(--serif);font-style:italic;
+  font-size:.92rem;padding:1.4rem;min-height:220px;position:relative;
+}
+.foto span{max-width:80%}
+.foto::before{
+  content:"📷";position:absolute;top:12px;left:14px;font-style:normal;font-size:1.1rem;opacity:.6;
+}
+
+/* ============================================================
+   HEADER (nav mínima)
+   ============================================================ */
+.topbar{
+  position:sticky;top:0;z-index:60;
+  background:rgba(251,245,234,.92);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--crema-borde);
+}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:.7rem;padding-bottom:.7rem}
+.marca{font-family:var(--serif);font-weight:700;font-size:1.25rem;color:var(--dulce);text-decoration:none;display:flex;align-items:center;gap:.5rem}
+.marca small{font-family:var(--sans);font-weight:600;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dorado);background:var(--dulce-oscuro);padding:.2rem .45rem;border-radius:6px}
+.nav-links{display:none;gap:1.5rem;align-items:center}
+.nav-links a{text-decoration:none;font-weight:600;font-size:.92rem;color:var(--texto);transition:color .15s}
+.nav-links a:hover{color:var(--frambuesa)}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{
+  position:relative;
+  background:
+    radial-gradient(1200px 600px at 100% -10%,rgba(201,154,78,.16),transparent 60%),
+    radial-gradient(900px 500px at -10% 110%,rgba(193,33,63,.10),transparent 55%),
+    var(--crema);
+  padding-top:clamp(2rem,6vw,3.5rem);
+  padding-bottom:clamp(2.5rem,6vw,4rem);
+  overflow:hidden;
+}
+.hero-grid{display:grid;gap:clamp(1.8rem,5vw,3.5rem);align-items:center}
+.hero-copy{max-width:620px}
+.hero h1{margin:.9rem 0 .8rem}
+.hero h1 .resalto{color:var(--frambuesa);font-style:italic}
+.hero .lede{font-size:clamp(1.05rem,2.6vw,1.25rem);color:var(--texto);max-width:34ch;margin-bottom:1.4rem}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-bottom:1.2rem}
+.hero-cta .btn{flex:1 1 auto;min-width:170px}
+.hero-nota{font-size:.82rem;color:var(--texto-suave);margin:0}
+.hero-foto{min-height:340px;border-radius:var(--radio-lg);box-shadow:var(--sombra-fuerte)}
+
+/* cinta desde 1986 decorativa */
+.ribbon{
+  display:inline-block;background:var(--frambuesa);color:#fff;
+  font-family:var(--serif);font-style:italic;font-weight:500;font-size:.95rem;
+  padding:.35rem 1.1rem;border-radius:6px;margin-bottom:.2rem;
+  box-shadow:var(--sombra);position:relative;
+}
+
+/* ============================================================
+   HISTORIA
+   ============================================================ */
+.historia{background:linear-gradient(180deg,var(--crema),#f6ecda)}
+.historia-grid{display:grid;gap:clamp(1.8rem,5vw,3rem);align-items:center}
+.historia-foto{min-height:320px;border-radius:var(--radio-lg);box-shadow:var(--sombra)}
+.historia blockquote{
+  font-family:var(--serif);font-style:italic;font-size:clamp(1.2rem,3.2vw,1.6rem);
+  color:var(--dulce);border-left:3px solid var(--dorado);
+  padding-left:1.1rem;margin:1.6rem 0 0;line-height:1.4;
+}
+.mini-datos{display:flex;flex-wrap:wrap;gap:1.4rem;margin-top:1.8rem}
+.mini-datos div{flex:1 1 130px}
+.mini-datos .num{font-family:var(--serif);font-weight:700;font-size:1.9rem;color:var(--frambuesa);line-height:1}
+.mini-datos .lbl{font-size:.85rem;color:var(--texto-suave);margin-top:.25rem}
+
+/* ============================================================
+   GUSTOS
+   ============================================================ */
+.hero-gusto{
+  display:grid;gap:clamp(1.4rem,4vw,2.6rem);align-items:center;
+  background:var(--dulce-oscuro);border-radius:var(--radio-lg);
+  padding:clamp(1.6rem,5vw,2.8rem);color:var(--crema);margin-bottom:2.6rem;
+  box-shadow:var(--sombra-fuerte);
+}
+.hero-gusto h3{color:#fff;font-size:clamp(1.5rem,4.5vw,2.2rem)}
+.hero-gusto .estrella-tag{
+  display:inline-block;background:var(--dorado);color:var(--dulce-oscuro);
+  font-family:var(--sans);font-weight:700;font-size:.72rem;letter-spacing:.1em;
+  text-transform:uppercase;padding:.35rem .8rem;border-radius:100px;margin-bottom:.9rem;
+}
+.hero-gusto p{color:#f3e6d0;margin-bottom:0}
+.hero-gusto .foto{background:repeating-linear-gradient(135deg,#5a3a22,#5a3a22 14px,#4a2f1a 14px,#4a2f1a 28px);border-color:var(--dorado);color:var(--crema);min-height:240px}
+
+.grid-gustos{display:grid;grid-template-columns:repeat(2,1fr);gap:.9rem}
+.gusto{
+  background:var(--blanco);border:1px solid var(--crema-borde);
+  border-radius:var(--radio);padding:1.1rem 1.1rem 1rem;
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s;
+}
+.gusto:hover{transform:translateY(-4px);box-shadow:var(--sombra);border-color:var(--dorado)}
+.gusto .emoji{font-size:1.5rem;line-height:1}
+.gusto h4{font-family:var(--serif);color:var(--dulce);margin:.5rem 0 .25rem;font-size:1.05rem;font-weight:600}
+.gusto p{font-size:.85rem;color:var(--texto-suave);margin:0}
+.gustos-cierre{text-align:center;margin-top:1.8rem}
+.gustos-cierre .big{font-family:var(--serif);font-size:clamp(1.4rem,4vw,2rem);color:var(--dulce);font-weight:600}
+.precio-nota{display:inline-block;background:var(--crema-2);border:1px dashed var(--dulce);border-radius:100px;padding:.4rem 1rem;font-size:.82rem;color:var(--dulce);margin-top:1rem}
+
+/* ============================================================
+   SIN TACC / SIN AZÚCAR
+   ============================================================ */
+.sintacc{background:linear-gradient(180deg,#eef4ec,#e4efe1)}
+.sintacc .badge-verde{color:var(--verde)}
+.sintacc-grid{display:grid;gap:1.2rem;grid-template-columns:1fr}
+.tarjeta-verde{
+  background:#fff;border-radius:var(--radio);border:1px solid #cfe1c9;
+  padding:1.6rem;box-shadow:var(--sombra);
+}
+.tarjeta-verde h3{color:var(--verde)}
+.tarjeta-verde ul{margin:.8rem 0 0;padding-left:1.1rem}
+.tarjeta-verde li{margin-bottom:.4rem}
+.sintacc .eyebrow{color:var(--verde)}
+.chip{display:inline-flex;align-items:center;gap:.4rem;background:#e4efe1;color:var(--verde);font-weight:700;font-size:.8rem;padding:.35rem .8rem;border-radius:100px;margin:.2rem .3rem .2rem 0}
+
+/* ============================================================
+   TORTAS Y POSTRES
+   ============================================================ */
+.grid-postres{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.postre{background:#fff;border:1px solid var(--crema-borde);border-radius:var(--radio);overflow:hidden;transition:transform .2s,box-shadow .2s}
+.postre:hover{transform:translateY(-4px);box-shadow:var(--sombra)}
+.postre .foto{border:none;border-radius:0;min-height:150px}
+.postre .txt{padding:.9rem 1rem 1.1rem}
+.postre h4{font-family:var(--serif);color:var(--dulce);margin:0 0 .3rem;font-size:1.05rem;font-weight:600}
+.postre p{font-size:.85rem;color:var(--texto-suave);margin:0}
+.postres-cta{text-align:center;margin-top:2rem}
+
+/* ============================================================
+   RESEÑAS
+   ============================================================ */
+.resenas{background:var(--dulce-oscuro);color:var(--crema)}
+.resenas h2{color:#fff}
+.resenas .eyebrow{color:var(--dorado)}
+.resumen-google{
+  display:flex;align-items:center;gap:1rem;flex-wrap:wrap;justify-content:center;
+  background:rgba(255,255,255,.06);border:1px solid rgba(201,154,78,.3);
+  border-radius:var(--radio);padding:1.1rem 1.4rem;margin:1.6rem auto 2.4rem;max-width:520px;
+}
+.resumen-google .puntaje{font-family:var(--serif);font-size:2.6rem;font-weight:700;color:var(--dorado);line-height:1}
+.resumen-google .det{text-align:left;font-size:.9rem;color:#e9dcc6}
+.grid-resenas{display:grid;gap:1.1rem;grid-template-columns:1fr}
+.resena{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:var(--radio);padding:1.4rem}
+.resena p{font-family:var(--serif);font-style:italic;font-size:1.05rem;color:#fbf1df;margin:0 0 .9rem;line-height:1.5}
+.resena .autor{display:flex;align-items:center;gap:.6rem;font-size:.88rem;color:#d9c8ac}
+.resena .autor b{color:#fff;font-family:var(--sans)}
+.resena .avatar{width:34px;height:34px;border-radius:50%;background:var(--frambuesa);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--sans);font-size:.9rem}
+
+/* ============================================================
+   HORARIOS + MAPA
+   ============================================================ */
+.contacto-grid{display:grid;gap:1.6rem;grid-template-columns:1fr}
+.card-info{background:#fff;border:1px solid var(--crema-borde);border-radius:var(--radio);padding:1.6rem;box-shadow:var(--sombra)}
+.card-info h3{margin-bottom:.7rem}
+.linea-info{display:flex;gap:.7rem;align-items:flex-start;margin-bottom:.9rem;font-size:.95rem}
+.linea-info .ic{font-size:1.15rem;line-height:1.3}
+.linea-info a{color:var(--frambuesa);font-weight:600;text-decoration:none}
+.linea-info a:hover{text-decoration:underline}
+.badge-abierto{display:inline-flex;align-items:center;gap:.45rem;background:#e4efe1;color:var(--verde);font-weight:700;font-size:.82rem;padding:.35rem .8rem;border-radius:100px}
+.badge-abierto .dot{width:8px;height:8px;border-radius:50%;background:var(--verde);animation:pulso 2s infinite}
+@keyframes pulso{0%,100%{opacity:1}50%{opacity:.35}}
+.mapa{border-radius:var(--radio);overflow:hidden;box-shadow:var(--sombra);border:1px solid var(--crema-borde)}
+.mapa iframe{width:100%;height:320px;border:0;display:block}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer{background:var(--dulce-oscuro);color:#e9dcc6;padding:3rem 0 6.5rem}
+.footer-grid{display:grid;gap:2rem;grid-template-columns:1fr}
+.footer-marca{font-family:var(--serif);font-size:1.6rem;color:#fff;font-weight:700;margin-bottom:.4rem}
+.footer-marca em{color:var(--dorado);font-style:italic;font-weight:500;font-size:1rem;display:block;margin-top:.2rem}
+footer a{color:#e9dcc6;text-decoration:none}
+footer a:hover{color:var(--dorado)}
+.footer-links{display:flex;flex-direction:column;gap:.55rem;font-size:.95rem}
+.footer-links .ttl{font-family:var(--sans);font-weight:700;color:var(--dorado);text-transform:uppercase;letter-spacing:.1em;font-size:.72rem;margin-bottom:.3rem}
+.footer-social{display:flex;gap:.7rem;margin-top:.4rem}
+.footer-social a{display:inline-flex;align-items:center;gap:.4rem;background:rgba(255,255,255,.07);padding:.5rem .9rem;border-radius:100px;font-weight:600;font-size:.85rem;transition:background .15s}
+.footer-social a:hover{background:rgba(255,255,255,.16)}
+.footer-legal{border-top:1px solid rgba(255,255,255,.12);margin-top:2rem;padding-top:1.4rem;font-size:.78rem;color:#b6a488;line-height:1.7}
+
+/* ============================================================
+   BOTÓN FLOTANTE "Pedí ya"
+   ============================================================ */
+.flotante{
+  position:fixed;left:50%;transform:translateX(-50%);bottom:1rem;z-index:80;
+  background:var(--frambuesa);color:#fff;text-decoration:none;font-weight:700;
+  padding:.95rem 1.8rem;border-radius:100px;font-size:1.02rem;
+  box-shadow:0 10px 28px rgba(193,33,63,.45);
+  display:inline-flex;align-items:center;gap:.5rem;
+  transition:transform .18s,background .18s;white-space:nowrap;
+}
+.flotante:hover{background:var(--frambuesa-osc);transform:translateX(-50%) translateY(-2px)}
+.flotante .ola{animation:tiembla 2.4s ease-in-out infinite}
+@keyframes tiembla{0%,92%,100%{transform:rotate(0)}94%{transform:rotate(-12deg)}96%{transform:rotate(12deg)}98%{transform:rotate(-8deg)}}
+
+/* ============================================================
+   ANIMACIÓN fade-in
+   ============================================================ */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* ============================================================
+   RESPONSIVE — desktop
+   ============================================================ */
+@media(min-width:720px){
+  .grid-gustos{grid-template-columns:repeat(3,1fr)}
+  .sintacc-grid{grid-template-columns:1fr 1fr}
+  .grid-resenas{grid-template-columns:repeat(3,1fr)}
+  .grid-postres{grid-template-columns:repeat(3,1fr)}
+}
+@media(min-width:900px){
+  .nav-links{display:flex}
+  .hero-grid{grid-template-columns:1.05fr .95fr}
+  .historia-grid{grid-template-columns:.95fr 1.05fr}
+  .hero-gusto{grid-template-columns:1fr 1fr}
+  .contacto-grid{grid-template-columns:1fr 1.1fr}
+  .footer-grid{grid-template-columns:1.4fr 1fr 1fr}
+  .flotante{left:auto;right:1.6rem;transform:none;bottom:1.6rem}
+  .flotante:hover{transform:translateY(-2px)}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+
+<!-- ============================================================
+     SEO local — schema.org IceCreamShop
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"IceCreamShop",
+  "name":"Heladería Desire",
+  "slogan":"Endulzando corazones desde 1986",
+  "description":"Heladería artesanal y cafetería en Ituzaingó desde 1986. Más de 65 gustos, opciones sin TACC aptas para celíacos y sin azúcar, tortas y postres helados.",
+  "foundingDate":"1986-01-10",
+  "url":"https://www.heladeriadesire.com/",
+  "telephone":"+541144581565",
+  "priceRange":"$$",
+  "servesCuisine":["Helado artesanal","Cafetería","Postres"],
+  "image":"https://www.heladeriadesire.com/og-image.jpg",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Juncal 302, esquina Olazábal",
+    "addressLocality":"Ituzaingó",
+    "addressRegion":"Buenos Aires",
+    "addressCountry":"AR"
+  },
+  "openingHoursSpecification":[{
+    "@type":"OpeningHoursSpecification",
+    "dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens":"13:00",
+    "closes":"24:00"
+  }],
+  "aggregateRating":{
+    "@type":"AggregateRating",
+    "ratingValue":"4.6",
+    "reviewCount":"4412",
+    "bestRating":"5"
+  },
+  "sameAs":[
+    "https://www.instagram.com/heladeriadesire/",
+    "https://www.facebook.com/heladeriadesire/"
+  ],
+  "hasMenu":"https://pedidos.masdelivery.com/desire",
+  "acceptsReservations":"False"
+}
+</script>
+</head>
+<body>
+
+<!-- ===================== TOPBAR ===================== -->
+<header class="topbar">
+  <div class="wrap">
+    <a href="#inicio" class="marca">Desire <small>1986</small></a>
+    <nav class="nav-links" aria-label="Secciones">
+      <a href="#historia">Historia</a>
+      <a href="#gustos">Gustos</a>
+      <a href="#sintacc">Sin TACC</a>
+      <a href="#tortas">Tortas</a>
+      <a href="#contacto">Cómo llegar</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="inicio">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="sello"><span class="punto"></span>40 años · desde 1986</span>
+      <h1>El helado artesanal de Ituzaingó <span class="resalto">desde 1986</span></h1>
+      <p class="lede">40 años endulzando el barrio. Más de 65 gustos hechos como el primer día.</p>
+      <div class="social-proof" style="margin-bottom:1.4rem">
+        <span class="estrellas" aria-hidden="true">★★★★★</span>
+        <span><strong>4.6</strong> · 4.412 reseñas en Google</span>
+      </div>
+      <div class="hero-cta">
+        <a class="btn btn-primario" href="https://pedidos.masdelivery.com/desire" target="_blank" rel="noopener">🍦 Pedí online</a>
+        <a class="btn btn-secundario" href="tel:01144581565">📞 Pedí por teléfono</a>
+      </div>
+      <p class="hero-nota">Delivery de lunes a lunes hasta las 24 hs · Juncal 302, esquina Olazábal.</p>
+    </div>
+    <div class="hero-foto foto reveal">
+      <span>FOTO: cucurucho de dulce de leche goloso en primer plano, vitrina de gustos de fondo</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HISTORIA ===================== -->
+<section class="historia" id="historia">
+  <div class="wrap historia-grid">
+    <div class="historia-foto foto reveal">
+      <span>FOTO: Juan Alberto Jackiewicz / fachada histórica Juncal y Olazábal</span>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Nuestra historia</span>
+      <h2>Un deseo que empezó en Puerto Deseado</h2>
+      <p>En 1986, Juan Alberto Jackiewicz abrió las puertas de Desire en Juncal 302. Antes había trabajado como administrador de hotel en Puerto Deseado, Santa Cruz, juntando peso a peso el capital para cumplir un sueño. De ahí el nombre: <em>Desire</em>, deseo.</p>
+      <p>Cuatro décadas después, la heladería sigue en manos de la familia directa del fundador. Insumos italianos, mostradores a –18 °C y la misma receta artesanal de siempre. Nada de cadenas: acá cada gusto tiene historia.</p>
+      <blockquote>“Endulzando corazones desde 1986.”</blockquote>
+      <div class="mini-datos">
+        <div><div class="num">40</div><div class="lbl">años de historia familiar</div></div>
+        <div><div class="num">+65</div><div class="lbl">gustos artesanales</div></div>
+        <div><div class="num">–18°C</div><div class="lbl">mostradores italianos</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GUSTOS ===================== -->
+<section id="gustos">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center;max-width:640px;margin:0 auto 2.4rem">
+      <span class="eyebrow">Los gustos</span>
+      <h2>Más de 65 gustos artesanales</h2>
+      <p style="color:var(--texto-suave)">Todos con insumos italianos. Estos son los que el barrio no deja de pedir.</p>
+    </div>
+
+    <!-- Héroe: Dulce de Leche Goloso -->
+    <div class="hero-gusto reveal">
+      <div>
+        <span class="estrella-tag">★ El más pedido</span>
+        <h3>Dulce de Leche Goloso</h3>
+        <p>Dulce de leche repostero con bombones rellenos. El favorito absoluto de los clientes: “el helado es riquísimo, pero este es el cielo”. Si venís por primera vez, empezá por acá.</p>
+      </div>
+      <div class="foto"><span>FOTO: cucurucho de Dulce de Leche Goloso con bombones</span></div>
+    </div>
+
+    <!-- Grilla de gustos -->
+    <div class="grid-gustos">
+      <div class="gusto reveal"><div class="emoji">🍫</div><h4>Nutella</h4><p>Cremoso, intenso, chocolate y avellanas.</p></div>
+      <div class="gusto reveal"><div class="emoji">🍋</div><h4>Lemon Pie</h4><p>Con base de merengue y limón.</p></div>
+      <div class="gusto reveal"><div class="emoji">🍷</div><h4>Sambayón al Málaga</h4><p>Clásico argentino con su golpe de vino.</p></div>
+      <div class="gusto reveal"><div class="emoji">🌰</div><h4>Vainilla Crunch</h4><p>Vainilla real con crocante.</p></div>
+      <div class="gusto reveal"><div class="emoji">🧀</div><h4>Mascarpone</h4><p>Suave y elegante. Uno de los imperdibles.</p></div>
+      <div class="gusto reveal"><div class="emoji">🍒</div><h4>Amarena</h4><p>Crema con cerezas amarena.</p></div>
+      <div class="gusto reveal"><div class="emoji">🍫</div><h4>Chocolate Bariloche</h4><p>Chocolate amargo bien de sur.</p></div>
+      <div class="gusto reveal"><div class="emoji">🥃</div><h4>Baileys</h4><p>Cremoso con licor irlandés.</p></div>
+      <div class="gusto reveal"><div class="emoji">🍨</div><h4>+57 gustos más</h4><p>Frutales, cremas y chocolates para descubrir.</p></div>
+    </div>
+
+    <div class="gustos-cierre reveal">
+      <p class="big">Venta por kilo y fracciones.</p>
+      <span class="precio-nota">Lista de precios vigente: [COMPLETAR]</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SIN TACC / SIN AZÚCAR ===================== -->
+<section class="sintacc" id="sintacc">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center;max-width:640px;margin:0 auto 2rem">
+      <span class="eyebrow">Para todos</span>
+      <h2 style="color:var(--verde)">Helado sin TACC y sin azúcar</h2>
+      <p style="color:var(--texto-suave)">En Ituzaingó casi nadie lo dice tan claro. Nosotros sí: helado apto celíacos, cucuruchos incluidos.</p>
+    </div>
+    <div class="sintacc-grid">
+      <div class="tarjeta-verde reveal">
+        <h3>🌾 Apto celíacos · Sin TACC</h3>
+        <p style="color:var(--texto-suave);margin-top:.6rem">Helados sin TACC y también <strong>cucuruchos sin TACC</strong>, para que nadie se quede con las ganas del cucurucho de verdad.</p>
+        <ul>
+          <li>Gustos artesanales sin TACC</li>
+          <li>Cucuruchos sin TACC disponibles</li>
+          <li>Ideal para quienes viven el helado sin riesgo</li>
+        </ul>
+        <p style="margin-top:1rem;font-size:.85rem;color:var(--texto-suave)">Consultá disponibilidad del día por teléfono. <span style="color:var(--verde);font-weight:600">[CONFIRMAR: lista de gustos sin TACC vigente]</span></p>
+      </div>
+      <div class="tarjeta-verde reveal">
+        <h3>🍃 Sin azúcar</h3>
+        <p style="color:var(--texto-suave);margin-top:.6rem">Alrededor de 4 gustos sin azúcar, para disfrutar cuidándose. Como dicen los clientes: “¡Tienen helado sin azúcar!”.</p>
+        <div style="margin-top:.9rem">
+          <span class="chip">Sin azúcar</span>
+          <span class="chip">Apto celíacos</span>
+          <span class="chip">Artesanal</span>
+        </div>
+        <p style="margin-top:1rem;font-size:.85rem;color:var(--texto-suave)"><span style="color:var(--verde);font-weight:600">[COMPLETAR: nombres de los ~4 gustos sin azúcar]</span></p>
+      </div>
+    </div>
+    <div class="reveal" style="text-align:center;margin-top:2rem">
+      <a class="btn btn-primario" href="https://pedidos.masdelivery.com/desire" target="_blank" rel="noopener">Pedí tu helado sin TACC</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TORTAS Y POSTRES ===================== -->
+<section id="tortas">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center;max-width:640px;margin:0 auto 2.2rem">
+      <span class="eyebrow">Para la mesa</span>
+      <h2>Tortas heladas, postres y catering</h2>
+      <p style="color:var(--texto-suave)">Para el cumpleaños, la sobremesa o el antojo de la tarde. Se encargan con anticipación.</p>
+    </div>
+    <div class="grid-postres">
+      <div class="postre reveal"><div class="foto"><span>FOTO: torta helada decorada</span></div><div class="txt"><h4>Tortas heladas</h4><p>A pedido, para cumpleaños y festejos.</p></div></div>
+      <div class="postre reveal"><div class="foto"><span>FOTO: bombón escocés y suizo</span></div><div class="txt"><h4>Bombón escocés y suizo</h4><p>Los postres helados de siempre.</p></div></div>
+      <div class="postre reveal"><div class="foto"><span>FOTO: almendrado</span></div><div class="txt"><h4>Almendrado</h4><p>Clásico entre clásicos.</p></div></div>
+      <div class="postre reveal"><div class="foto"><span>FOTO: alfajores helados</span></div><div class="txt"><h4>Alfajores helados</h4><p>Helado entre dos tapas. Un lujo.</p></div></div>
+      <div class="postre reveal"><div class="foto"><span>FOTO: milkshakes, frappés y smoothies</span></div><div class="txt"><h4>Shakes y smoothies</h4><p>Milkshakes, frappés y smoothies.</p></div></div>
+      <div class="postre reveal"><div class="foto"><span>FOTO: catering de helado para eventos</span></div><div class="txt"><h4>Catering de helado</h4><p>Para tu evento. Consultanos.</p></div></div>
+    </div>
+    <div class="postres-cta reveal">
+      <a class="btn btn-secundario" href="tel:01144581565">📞 Encargá tu torta al (011) 4458-1565</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== RESEÑAS ===================== -->
+<section class="resenas" id="resenas">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center;max-width:640px;margin:0 auto">
+      <span class="eyebrow">Lo que dice el barrio</span>
+      <h2>40 años endulzando Ituzaingó</h2>
+      <div class="resumen-google">
+        <div class="puntaje">4.6</div>
+        <div class="det">
+          <div class="estrellas" aria-hidden="true">★★★★★</div>
+          <div><strong>4.412 reseñas</strong> en Google</div>
+        </div>
+      </div>
+    </div>
+    <div class="grid-resenas">
+      <div class="resena reveal">
+        <p>“La histórica heladería artesanal de Ituzaingó cuenta con helados deliciosos todo el año. Imperdibles: el mascarpone y el dulce de leche.”</p>
+        <div class="autor"><span class="avatar">N</span><div><b>Nina</b><br><span class="estrellas" aria-hidden="true">★★★★★</span></div></div>
+      </div>
+      <div class="resena reveal">
+        <p>“Recomiendo muchísimo el dulce de leche goloso… el helado es riquísimo pero ese es el cielo.”</p>
+        <div class="autor"><span class="avatar">B</span><div><b>Brenda</b><br><span class="estrellas" aria-hidden="true">★★★★★</span></div></div>
+      </div>
+      <div class="resena reveal">
+        <p>“Excelente, clásico de Ituzaingó con el mejor helado artesanal del oeste, buen servicio y buenos precios. ¡Tienen helado sin azúcar!”</p>
+        <div class="autor"><span class="avatar">M</span><div><b>Matías</b><br><span class="estrellas" aria-hidden="true">★★★★★</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HORARIOS + CÓMO LLEGAR ===================== -->
+<section id="contacto">
+  <div class="wrap">
+    <div class="reveal" style="max-width:640px;margin:0 auto 2rem;text-align:center">
+      <span class="eyebrow">Visitanos</span>
+      <h2>Horarios y cómo llegar</h2>
+    </div>
+    <div class="contacto-grid">
+      <div class="card-info reveal">
+        <span class="badge-abierto"><span class="dot"></span>Abierto todos los días</span>
+        <h3 style="margin-top:1rem">Horarios</h3>
+        <div class="linea-info"><span class="ic">🕐</span><div>Todos los días de <strong>13 a 24 hs</strong>.<br>Delivery de lunes a lunes hasta las 24 hs.<br><span style="color:var(--texto-suave);font-size:.85rem">[CONFIRMAR: domingos desde las 12]</span></div></div>
+        <h3 style="margin-top:1.4rem">Dónde estamos</h3>
+        <div class="linea-info"><span class="ic">📍</span><div>Juncal 302, esquina Olazábal.<br>Ituzaingó centro, Buenos Aires.</div></div>
+        <div class="linea-info"><span class="ic">📞</span><div>Pedidos: <a href="tel:01144581565">(011) 4458-1565</a></div></div>
+        <div class="linea-info"><span class="ic">🍦</span><div>Pedí online: <a href="https://pedidos.masdelivery.com/desire" target="_blank" rel="noopener">masdelivery.com/desire</a> · también en PedidosYa</div></div>
+        <div style="margin-top:1.2rem;display:flex;gap:.7rem;flex-wrap:wrap">
+          <a class="btn btn-primario" href="https://pedidos.masdelivery.com/desire" target="_blank" rel="noopener">Pedí online</a>
+          <a class="btn btn-crema" href="tel:01144581565">Llamar</a>
+        </div>
+      </div>
+      <div class="mapa reveal">
+        <iframe
+          title="Mapa: Heladería Desire, Juncal 302, Ituzaingó"
+          src="https://www.google.com/maps?q=Juncal%20302%2C%20Ituzaing%C3%B3%2C%20Buenos%20Aires&output=embed"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="wrap footer-grid">
+    <div>
+      <div class="footer-marca">Heladería Desire<em>Endulzando corazones desde 1986</em></div>
+      <p style="max-width:34ch;color:#c8b79a;font-size:.92rem;margin-top:.8rem">Heladería artesanal y cafetería. 40 años en el corazón de Ituzaingó.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/heladeriadesire/" target="_blank" rel="noopener">📷 Instagram</a>
+        <a href="https://www.facebook.com/heladeriadesire/" target="_blank" rel="noopener">👍 Facebook</a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <span class="ttl">Pedidos</span>
+      <a href="https://pedidos.masdelivery.com/desire" target="_blank" rel="noopener">Pedí online (masdelivery)</a>
+      <a href="tel:01144581565">Teléfono: (011) 4458-1565</a>
+      <a href="https://pedidos.masdelivery.com/desire" target="_blank" rel="noopener">También en PedidosYa</a>
+    </div>
+    <div class="footer-links">
+      <span class="ttl">Visitanos</span>
+      <a href="https://www.google.com/maps?q=Juncal+302,+Ituzaingó,+Buenos+Aires" target="_blank" rel="noopener">Juncal 302, esq. Olazábal</a>
+      <span>Ituzaingó centro, Buenos Aires</span>
+      <span>Todos los días de 13 a 24 hs</span>
+    </div>
+  </div>
+  <div class="wrap footer-legal">
+    Heladería Desire · Juncal 302, Ituzaingó, Buenos Aires · Tel. (011) 4458-1565.<br>
+    Sitio de demostración. Instagram <a href="https://www.instagram.com/heladeriadesire/" target="_blank" rel="noopener">@heladeriadesire</a>. Datos verificados a julio 2026; ítems marcados [COMPLETAR]/[CONFIRMAR] pendientes de validar con el local.
+  </div>
+</footer>
+
+<!-- ===================== BOTÓN FLOTANTE ===================== -->
+<a class="flotante" href="https://pedidos.masdelivery.com/desire" target="_blank" rel="noopener" aria-label="Pedí ya online">
+  <span class="ola" aria-hidden="true">🍦</span> Pedí ya
+</a>
+
+<script>
+(function(){
+  "use strict";
+  // Fade-in al scrollear con IntersectionObserver
+  var els = document.querySelectorAll(".reveal");
+  if(!("IntersectionObserver" in window)){
+    els.forEach(function(el){ el.classList.add("visible"); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add("visible");
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+  els.forEach(function(el){ io.observe(el); });
+})();
+</script>
+
+<!-- aviso de demo conceptual -->
+<style>
+#demo-badge{position:fixed;right:12px;bottom:12px;z-index:99999;background:rgba(17,17,17,.86);color:#f2f2f2;
+font:500 11px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:8px 12px;border-radius:999px;
+max-width:min(92vw,360px);box-shadow:0 4px 16px rgba(0,0,0,.28);backdrop-filter:blur(6px);text-align:center}
+#demo-badge a{color:#8ab4ff;text-decoration:none}
+@media print{#demo-badge{display:none}}
+</style>
+<div id="demo-badge">Demo conceptual sin relacion oficial con el negocio &middot; disenada por
+<a href="https://github.com/pedrogalbusera-code" target="_blank" rel="noopener">Pedro Galbusera</a></div>
+</body>
+</html>

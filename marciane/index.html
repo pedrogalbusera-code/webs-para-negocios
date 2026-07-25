@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marciane Growshop · Growshop en Bahía Blanca 👽 Cultivo indoor, parafernalia y asesoramiento</title>
+<meta name="description" content="Marciane Growshop, tu growshop en Bahía Blanca. Parafernalia, fertilizantes, carpas y combos indoor. 1 y 3 cuotas sin interés, descuento en efectivo y asesoramiento de verdad. Consultanos por WhatsApp.">
+<meta name="theme-color" content="#0a0713">
+<link rel="canonical" href="https://www.instagram.com/marcianegrow/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="Marciane Growshop · Growshop en Bahía Blanca 👽">
+<meta property="og:description" content="Todo para tu cultivo indoor en Bahía Blanca. Parafernalia, fertilizantes por marca, carpas y combos indoor. En cuotas sin interés y con asesoramiento de verdad.">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Marciane Growshop">
+
+<!-- Fuentes -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  /* Paleta marciana nocturna */
+  --bg:#0a0713;
+  --bg-2:#0f0a1e;
+  --bg-3:#160e2b;
+  --surface:#140d24;
+  --surface-2:#1b1233;
+  --border:#2b1f47;
+  --border-neon:#39ff8a44;
+
+  --neon:#39ff8a;          /* verde neón - marca / CTA */
+  --neon-soft:#7cffb8;
+  --violet:#9d5cff;        /* violeta - secundario */
+  --violet-soft:#c39bff;
+
+  --text:#f2eefb;
+  --text-dim:#b7add0;
+  --text-mute:#8378a3;
+
+  --wa:#25d366;            /* verde WhatsApp */
+  --wa-dark:#1ebe5a;
+
+  --radius:16px;
+  --radius-sm:11px;
+  --shadow:0 10px 40px rgba(0,0,0,.5);
+  --maxw:1120px;
+
+  --ff-display:'Space Grotesk',system-ui,sans-serif;
+  --ff-body:'Inter',system-ui,-apple-system,sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--ff-body);
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+/* Fondo estrellado sutil */
+.stars{
+  position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(1px 1px at 20% 30%, #ffffff88, transparent),
+    radial-gradient(1px 1px at 70% 20%, #ffffff66, transparent),
+    radial-gradient(1px 1px at 40% 70%, #c39bff77, transparent),
+    radial-gradient(1.5px 1.5px at 85% 60%, #7cffb877, transparent),
+    radial-gradient(1px 1px at 55% 45%, #ffffff55, transparent),
+    radial-gradient(1px 1px at 10% 80%, #ffffff44, transparent),
+    radial-gradient(1.5px 1.5px at 90% 90%, #9d5cff66, transparent);
+  background-repeat:no-repeat;
+  opacity:.7;
+}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px;position:relative;z-index:1}
+section{position:relative;z-index:1}
+
+h1,h2,h3{font-family:var(--ff-display);line-height:1.12;letter-spacing:-.01em}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+
+/* ---------- Botones ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5em;
+  font-family:var(--ff-body);font-weight:700;font-size:1rem;
+  padding:14px 22px;border-radius:999px;border:0;cursor:pointer;
+  transition:transform .18s ease, box-shadow .25s ease, background .2s ease;
+  text-align:center;line-height:1.2;
+}
+.btn-wa{
+  background:linear-gradient(135deg,var(--wa),var(--wa-dark));
+  color:#04210f;
+  box-shadow:0 0 0 rgba(37,211,102,0);
+}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(37,211,102,.35)}
+.btn-neon{
+  background:linear-gradient(135deg,var(--neon),#22d36e);
+  color:#04210f;
+  box-shadow:0 0 0 rgba(57,255,138,0);
+}
+.btn-neon:hover{transform:translateY(-2px);box-shadow:0 0 34px rgba(57,255,138,.45)}
+.btn-ghost{
+  background:transparent;color:var(--neon);
+  border:1.5px solid var(--neon);font-weight:600;
+}
+.btn-ghost:hover{background:var(--neon);color:#04210f;transform:translateY(-2px)}
+.btn-sm{padding:10px 16px;font-size:.9rem}
+.btn-block{width:100%}
+.wa-ico{width:1.15em;height:1.15em;flex:0 0 auto}
+
+/* ---------- Header ---------- */
+header{
+  position:sticky;top:0;z-index:40;
+  background:rgba(10,7,19,.82);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;max-width:var(--maxw);margin:0 auto}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--ff-display);font-weight:700;font-size:1.15rem}
+.brand .logo{width:34px;height:34px;flex:0 0 auto}
+.brand small{display:block;font-family:var(--ff-body);font-weight:500;font-size:.62rem;letter-spacing:.14em;color:var(--neon);text-transform:uppercase;margin-top:-2px}
+.nav-cta{display:none}
+@media(min-width:720px){.nav-cta{display:inline-flex}}
+
+/* ---------- Hero ---------- */
+.hero{
+  padding:52px 0 46px;
+  background:
+    radial-gradient(60% 60% at 80% 0%, rgba(157,92,255,.22), transparent 70%),
+    radial-gradient(55% 55% at 10% 20%, rgba(57,255,138,.14), transparent 70%),
+    linear-gradient(180deg,var(--bg),var(--bg-2));
+  overflow:hidden;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(57,255,138,.1);border:1px solid var(--border-neon);
+  color:var(--neon-soft);font-weight:600;font-size:.8rem;
+  padding:7px 14px;border-radius:999px;margin-bottom:18px;
+}
+.hero h1{
+  font-size:clamp(2.2rem,8.5vw,4rem);font-weight:700;
+  background:linear-gradient(120deg,#fff 20%,var(--neon-soft) 55%,var(--violet-soft));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  margin-bottom:6px;
+}
+.hero .sub{font-family:var(--ff-display);font-weight:600;font-size:clamp(1.05rem,4.5vw,1.5rem);color:var(--text);margin-bottom:14px}
+.hero p.lead{color:var(--text-dim);font-size:1.02rem;max-width:44ch;margin-bottom:22px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px}
+.chip{
+  display:inline-flex;align-items:center;gap:7px;
+  background:var(--surface);border:1px solid var(--border);
+  padding:9px 15px;border-radius:999px;font-weight:600;font-size:.9rem;color:var(--text-dim);
+}
+.chip b{color:var(--neon)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.hero-note{color:var(--text-mute);font-size:.82rem;margin-top:16px}
+.hero-note b{color:var(--violet-soft)}
+
+/* Ovni decorativo */
+.ufo{position:absolute;top:8%;right:-4%;width:170px;opacity:.9;filter:drop-shadow(0 0 24px rgba(57,255,138,.35));animation:float 6s ease-in-out infinite;pointer-events:none}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@media(max-width:640px){.ufo{width:110px;top:auto;bottom:-10px;right:-6%;opacity:.55}}
+
+/* ---------- Secciones ---------- */
+.section{padding:56px 0}
+.section-head{max-width:640px;margin-bottom:32px}
+.eyebrow{display:inline-block;font-family:var(--ff-body);font-weight:700;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--neon);margin-bottom:10px}
+.section-head h2{font-size:clamp(1.7rem,5.5vw,2.5rem);font-weight:700;margin-bottom:10px}
+.section-head p{color:var(--text-dim)}
+
+/* ---------- Grilla de categorías ---------- */
+.cat-grid{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:640px){.cat-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.cat-grid{grid-template-columns:repeat(3,1fr)}}
+
+.card{
+  background:linear-gradient(180deg,var(--surface),var(--bg-2));
+  border:1px solid var(--border);border-radius:var(--radius);
+  padding:22px;display:flex;flex-direction:column;
+  transition:transform .2s ease, border-color .2s ease, box-shadow .3s ease;
+}
+.card:hover{transform:translateY(-4px);border-color:var(--border-neon);box-shadow:0 14px 40px rgba(57,255,138,.08)}
+.card-ico{font-size:1.6rem;margin-bottom:6px}
+.card h3{font-size:1.22rem;margin-bottom:4px}
+.card .card-desc{color:var(--text-mute);font-size:.86rem;margin-bottom:14px}
+
+.plist{list-style:none;display:flex;flex-direction:column;gap:2px;margin-bottom:16px;flex:1}
+.plist li{
+  display:flex;justify-content:space-between;gap:12px;align-items:baseline;
+  padding:8px 0;border-bottom:1px dashed var(--border);font-size:.92rem;
+}
+.plist li:last-child{border-bottom:0}
+.plist .pname{color:var(--text-dim)}
+.plist .pprice{font-weight:700;color:var(--neon-soft);white-space:nowrap;font-variant-numeric:tabular-nums}
+.plist .todo{color:var(--violet-soft);font-weight:600;font-size:.82rem}
+
+.brand-group{margin-bottom:6px}
+.brand-group > .bg-name{font-family:var(--ff-display);font-weight:600;font-size:.82rem;color:var(--violet-soft);letter-spacing:.02em;margin:10px 0 2px}
+
+.card-actions{display:flex;flex-direction:column;gap:9px;margin-top:auto}
+
+.tag-list{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.tag{background:var(--surface-2);border:1px solid var(--border);color:var(--text-dim);font-size:.82rem;font-weight:500;padding:6px 11px;border-radius:8px}
+
+/* ---------- Combos indoor ---------- */
+.combos{background:linear-gradient(180deg,var(--bg-2),var(--bg-3));border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.combo-grid{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:820px){.combo-grid{grid-template-columns:repeat(3,1fr)}}
+.combo{
+  background:linear-gradient(180deg,var(--surface),var(--bg-2));
+  border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;
+  display:flex;flex-direction:column;
+  transition:transform .2s ease, border-color .2s ease, box-shadow .3s ease;
+}
+.combo:hover{transform:translateY(-4px);border-color:var(--border-neon);box-shadow:0 14px 44px rgba(157,92,255,.12)}
+.combo.featured{border-color:var(--neon);box-shadow:0 0 0 1px var(--neon-soft) inset}
+.combo-media{position:relative;aspect-ratio:16/10}
+.combo-body{padding:20px;display:flex;flex-direction:column;flex:1}
+.combo-body h3{font-size:1.3rem;margin-bottom:2px}
+.combo-tier{font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--neon);margin-bottom:12px}
+.combo ul{list-style:none;display:flex;flex-direction:column;gap:7px;margin-bottom:16px;flex:1}
+.combo ul li{display:flex;gap:9px;font-size:.9rem;color:var(--text-dim)}
+.combo ul li::before{content:"✦";color:var(--neon);flex:0 0 auto}
+.combo-price{font-family:var(--ff-display);font-weight:700;font-size:1.05rem;color:var(--violet-soft);margin-bottom:14px}
+.featured-flag{position:absolute;top:12px;left:12px;z-index:2;background:var(--neon);color:#04210f;font-weight:700;font-size:.72rem;letter-spacing:.06em;padding:5px 11px;border-radius:999px}
+
+/* ---------- Placeholder de imagen ---------- */
+.ph{
+  position:relative;width:100%;height:100%;min-height:150px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;
+  background:
+    repeating-linear-gradient(45deg,rgba(57,255,138,.04) 0 12px,transparent 12px 24px),
+    linear-gradient(160deg,var(--surface-2),var(--bg-3));
+  border:1px dashed var(--border-neon);color:var(--text-mute);
+  font-size:.78rem;font-weight:600;letter-spacing:.03em;padding:16px;
+}
+.ph .ph-ico{font-size:1.8rem;opacity:.85}
+.ph .ph-tag{color:var(--neon-soft);text-transform:uppercase;letter-spacing:.14em;font-size:.66rem}
+
+/* ---------- Asesoramiento ---------- */
+.aseso{
+  background:
+    radial-gradient(70% 120% at 100% 0%, rgba(157,92,255,.2), transparent 60%),
+    linear-gradient(160deg,var(--surface),var(--bg-2));
+  border:1px solid var(--border);border-radius:22px;
+  padding:38px 28px;text-align:center;position:relative;overflow:hidden;
+}
+.aseso .alien{font-size:2.6rem;margin-bottom:8px}
+.aseso h2{font-size:clamp(1.6rem,5.5vw,2.3rem);margin-bottom:10px}
+.aseso p{color:var(--text-dim);max-width:52ch;margin:0 auto 22px}
+
+/* ---------- Financiación ---------- */
+.fin-grid{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:720px){.fin-grid{grid-template-columns:repeat(3,1fr)}}
+.fin{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px}
+.fin .fin-ico{font-size:1.7rem;margin-bottom:8px}
+.fin h3{font-size:1.35rem;color:var(--neon-soft);margin-bottom:4px}
+.fin p{color:var(--text-dim);font-size:.92rem}
+
+/* ---------- Cómo llegar ---------- */
+.llegar-grid{display:grid;grid-template-columns:1fr;gap:22px;align-items:stretch}
+@media(min-width:900px){.llegar-grid{grid-template-columns:1fr 1fr}}
+.info-box{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:26px;display:flex;flex-direction:column;gap:18px}
+.info-row{display:flex;gap:14px;align-items:flex-start}
+.info-row .i-ico{font-size:1.3rem;flex:0 0 auto;line-height:1.3}
+.info-row h4{font-family:var(--ff-display);font-size:1rem;margin-bottom:2px}
+.info-row p,.info-row a{color:var(--text-dim);font-size:.92rem}
+.info-row a:hover{color:var(--neon)}
+.hours{list-style:none;color:var(--text-dim);font-size:.92rem}
+.hours li{display:flex;justify-content:space-between;gap:12px;padding:3px 0}
+.map-wrap{border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);min-height:320px;position:relative}
+.map-wrap iframe{width:100%;height:100%;min-height:320px;border:0;filter:grayscale(.2) invert(.9) hue-rotate(180deg) contrast(.95)}
+
+/* ---------- Footer ---------- */
+footer{background:var(--bg-2);border-top:1px solid var(--border);padding:48px 0 30px;margin-top:10px}
+.foot-grid{display:grid;grid-template-columns:1fr;gap:26px;margin-bottom:28px}
+@media(min-width:760px){.foot-grid{grid-template-columns:1.4fr 1fr 1fr}}
+.foot-brand{display:flex;align-items:center;gap:10px;font-family:var(--ff-display);font-weight:700;font-size:1.2rem;margin-bottom:12px}
+.foot-brand .logo{width:32px;height:32px}
+.foot-col p,.foot-col a{color:var(--text-dim);font-size:.9rem}
+.foot-col h5{font-family:var(--ff-display);font-size:.95rem;margin-bottom:12px;color:var(--text)}
+.foot-links{list-style:none;display:flex;flex-direction:column;gap:9px}
+.foot-links a:hover{color:var(--neon)}
+.foot-links li{display:flex;align-items:center;gap:9px}
+.legal{border-top:1px solid var(--border);padding-top:20px;color:var(--text-mute);font-size:.8rem;display:flex;flex-direction:column;gap:8px}
+.legal .edad{display:inline-flex;align-items:center;gap:8px;color:var(--violet-soft);font-weight:600}
+.legal .edad .b18{background:var(--surface-2);border:1px solid var(--border);border-radius:6px;padding:2px 7px;font-size:.75rem}
+
+/* ---------- Botón flotante WhatsApp ---------- */
+.fab{
+  position:fixed;right:16px;bottom:16px;z-index:60;
+  display:inline-flex;align-items:center;gap:10px;
+  background:linear-gradient(135deg,var(--wa),var(--wa-dark));color:#04210f;
+  font-weight:700;padding:13px 18px;border-radius:999px;
+  box-shadow:0 8px 26px rgba(0,0,0,.45), 0 0 0 rgba(37,211,102,.5);
+  animation:pulse 2.6s infinite;
+}
+.fab .wa-ico{width:1.4em;height:1.4em}
+.fab .fab-txt{display:none}
+@media(min-width:520px){.fab .fab-txt{display:inline}}
+@keyframes pulse{0%{box-shadow:0 8px 26px rgba(0,0,0,.45),0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 8px 26px rgba(0,0,0,.45),0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 8px 26px rgba(0,0,0,.45),0 0 0 0 rgba(37,211,102,0)}}
+
+/* ---------- Animación fade-in ---------- */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease, transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .ufo,.fab{animation:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<div class="stars" aria-hidden="true"></div>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <nav class="nav">
+    <a class="brand" href="#top" aria-label="Marciane Growshop - inicio">
+      <!-- Logo alien SVG inline -->
+      <svg class="logo" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Alien Marciane">
+        <defs><radialGradient id="ghead" cx="50%" cy="40%" r="60%">
+          <stop offset="0%" stop-color="#7cffb8"/><stop offset="100%" stop-color="#22c96e"/>
+        </radialGradient></defs>
+        <path d="M32 6c13 0 22 10 22 24 0 16-12 28-22 28S10 46 10 30C10 16 19 6 32 6z" fill="url(#ghead)"/>
+        <ellipse cx="23" cy="34" rx="6.5" ry="9" fill="#0a0713" transform="rotate(-18 23 34)"/>
+        <ellipse cx="41" cy="34" rx="6.5" ry="9" fill="#0a0713" transform="rotate(18 41 34)"/>
+        <ellipse cx="24.5" cy="31" rx="1.7" ry="2.4" fill="#9d5cff"/>
+        <ellipse cx="39.5" cy="31" rx="1.7" ry="2.4" fill="#9d5cff"/>
+      </svg>
+      <span>Marciane<small>Growshop · Bahía Blanca</small></span>
+    </a>
+    <a class="btn btn-wa btn-sm nav-cta" href="https://wa.me/5492914369675?text=Hola%20Marciane!%20Quiero%20hacer%20una%20consulta" target="_blank" rel="noopener">
+      <svg class="wa-ico" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.3.6 4.5 1.8 6.4L3 29l7.3-2.2c1.8 1 3.9 1.5 5.7 1.5 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.7c-1.7 0-3.4-.5-4.9-1.4l-.4-.2-4.3 1.3 1.3-4.2-.3-.4a10 10 0 01-1.6-5.4C5.5 9.9 10.2 5.3 16 5.3S26.5 9.9 26.5 15.6 21.8 25.7 16 25.7zm5.8-7.5c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2c-.2.3-.8 1-1 1.2s-.4.2-.7 0c-.3-.2-1.4-.5-2.6-1.6-1-.8-1.6-1.9-1.8-2.2s0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.5s0-.4 0-.6c-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.2 3.3 5.3 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.2-.6-.4z"/></svg>
+      WhatsApp
+    </a>
+  </nav>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <!-- OVNI decorativo -->
+  <svg class="ufo" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <ellipse cx="100" cy="118" rx="70" ry="8" fill="#39ff8a" opacity=".12"/>
+    <path d="M40 70 Q100 30 160 70 Q100 96 40 70Z" fill="#9d5cff"/>
+    <path d="M55 66 Q100 44 145 66 Q100 84 55 66Z" fill="#160e2b"/>
+    <path d="M78 52 Q100 34 122 52 Q100 62 78 52Z" fill="#7cffb8"/>
+    <circle cx="70" cy="74" r="3.5" fill="#39ff8a"/><circle cx="100" cy="80" r="3.5" fill="#39ff8a"/><circle cx="130" cy="74" r="3.5" fill="#39ff8a"/>
+    <path d="M85 84 L115 84 L108 110 L92 110 Z" fill="#39ff8a" opacity=".18"/>
+  </svg>
+
+  <div class="wrap">
+    <span class="hero-badge">🛸 1 y 3 cuotas sin interés · descuento en efectivo</span>
+    <h1>Marciane Growshop</h1>
+    <p class="sub">Todo para tu cultivo indoor en Bahía Blanca 👽</p>
+    <p class="lead">Parafernalia, fertilizantes por marca, carpas y combos indoor. Te brindamos todo lo necesario, en cuotas y con asesoramiento de verdad.</p>
+
+    <div class="chips">
+      <span class="chip"><b>◆</b> Parafernalia</span>
+      <span class="chip"><b>◆</b> Cultivo</span>
+      <span class="chip"><b>◆</b> Indoor</span>
+    </div>
+
+    <div class="hero-actions">
+      <a class="btn btn-wa" href="https://wa.me/5492914369675?text=Hola%20Marciane!%20Quiero%20hacer%20una%20consulta" target="_blank" rel="noopener">
+        <svg class="wa-ico" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.3.6 4.5 1.8 6.4L3 29l7.3-2.2c1.8 1 3.9 1.5 5.7 1.5 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.7c-1.7 0-3.4-.5-4.9-1.4l-.4-.2-4.3 1.3 1.3-4.2-.3-.4a10 10 0 01-1.6-5.4C5.5 9.9 10.2 5.3 16 5.3S26.5 9.9 26.5 15.6 21.8 25.7 16 25.7zm5.8-7.5c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2c-.2.3-.8 1-1 1.2s-.4.2-.7 0c-.3-.2-1.4-.5-2.6-1.6-1-.8-1.6-1.9-1.8-2.2s0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.5s0-.4 0-.6c-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.2 3.3 5.3 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.2-.6-.4z"/></svg>
+        Consultanos por WhatsApp
+      </a>
+      <a class="btn btn-ghost" href="#categorias">Ver categorías</a>
+    </div>
+    <p class="hero-note">Estamos en <b>Av. Arias 2092, Bahía Blanca</b> · Lun a Sáb</p>
+  </div>
+</section>
+
+<!-- ============ CATEGORÍAS ============ -->
+<section class="section" id="categorias">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Catálogo</span>
+      <h2>Todo para tu cultivo, por categoría</h2>
+      <p>Una muestra de lo que tenemos en el local. El catálogo completo lo ves en WhatsApp y cualquier duda te la respondemos al toque. Top Crop, Namaste, Azteka, Vamp y más marcas de verdad.</p>
+    </div>
+
+    <div class="cat-grid">
+
+      <!-- Parafernalia -->
+      <article class="card reveal">
+        <div class="card-ico">🔥</div>
+        <h3>Parafernalia</h3>
+        <p class="card-desc">Bandejas, latas, ceniceros, papeles, filtros, pipas y armadores.</p>
+        <ul class="plist">
+          <li><span class="pname">Mini tapa imantada Lion Rolling Circus</span><span class="pprice">$12.900</span></li>
+          <li><span class="pname">Bandeja Lion Rolling Circus mediana</span><span class="pprice">$30.700</span></li>
+          <li><span class="pname">Mini lata Lion Rolling Circus</span><span class="pprice">$6.900</span></li>
+          <li><span class="pname">Portasedas Lion Rolling Circus</span><span class="pprice">$8.700</span></li>
+          <li><span class="pname">Lata Raw Pop Up</span><span class="pprice">$12.300</span></li>
+          <li><span class="pname">Cenicero de silicona Squadafum</span><span class="pprice">$23.700</span></li>
+          <li><span class="pname">Ziploc Lion Rolling Circus</span><span class="pprice">$10.000</span></li>
+          <li><span class="pname">Filtros Raw</span><span class="pprice">$2.200</span></li>
+          <li><span class="pname">Filtros XXL Zeus 40x54mm</span><span class="pprice">$1.400</span></li>
+          <li><span class="pname">Pipa calavera con diseño</span><span class="pprice">$15.900</span></li>
+          <li><span class="pname">Lata / armador automático</span><span class="pprice">$18.200</span></li>
+          <li><span class="pname">Cono / pipa con diseño</span><span class="pprice">$11.400</span></li>
+        </ul>
+        <div class="card-actions">
+          <a class="btn btn-wa btn-sm btn-block" href="https://wa.me/5492914369675?text=Hola%20Marciane!%20Quiero%20consultar%20por%20parafernalia" target="_blank" rel="noopener">Consultar parafernalia</a>
+          <a class="btn btn-ghost btn-sm btn-block" href="https://wa.me/c/5492914369675" target="_blank" rel="noopener">Ver catálogo completo</a>
+        </div>
+      </article>
+
+      <!-- Fertilizantes por marca -->
+      <article class="card reveal">
+        <div class="card-ico">🧪</div>
+        <h3>Fertilizantes y aditivos</h3>
+        <p class="card-desc">Nutrición por marca para cada etapa del cultivo.</p>
+        <ul class="plist">
+          <div class="brand-group"><div class="bg-name">🤖 Top Crop</div></div>
+          <li><span class="pname">Deeper Underground</span><span class="pprice">$16.900</span></li>
+          <li><span class="pname">Big One 250ml</span><span class="pprice">$33.900</span></li>
+          <li><span class="pname">Big One 100ml</span><span class="pprice">$20.400</span></li>
+          <div class="brand-group"><div class="bg-name">BioMamboreta</div></div>
+          <li><span class="pname">pH-</span><span class="pprice">$15.100</span></li>
+          <li><span class="pname">AMINOZnB 100cc</span><span class="pprice">$24.300</span></li>
+          <div class="brand-group"><div class="bg-name">🦇 Vamp</div></div>
+          <li><span class="pname">Polvos de roca 3 en 1</span><span class="pprice">$14.800</span></li>
+          <li><span class="pname">Guano de murciélago</span><span class="pprice">$14.600</span></li>
+          <li><span class="pname">Polvos de roca</span><span class="pprice">$9.100</span></li>
+          <div class="brand-group"><div class="bg-name">🗿 Azteka</div></div>
+          <li><span class="pname">Aura 250ml</span><span class="pprice">$19.500</span></li>
+          <li><span class="pname">Budha Juice 500ml</span><span class="pprice">$34.500</span></li>
+          <li><span class="pname">Miracle 500ml</span><span class="pprice">$40.700</span></li>
+          <div class="brand-group"><div class="bg-name">🌺 Alma Sativa</div></div>
+          <li><span class="pname">Bio Bloom 1L</span><span class="pprice">$38.500</span></li>
+          <li><span class="pname">Bio Booster 250ml</span><span class="todo">[COMPLETAR]</span></li>
+          <div class="brand-group"><div class="bg-name">BioProyect</div></div>
+          <li><span class="pname">Sweet Carbo 70g</span><span class="pprice">$12.400</span></li>
+          <div class="brand-group"><div class="bg-name">Namaste</div></div>
+          <li><span class="pname">Shanti 100ml</span><span class="pprice">$17.200</span></li>
+          <li><span class="pname">Flora Booster 500ml</span><span class="pprice">$25.500</span></li>
+          <li><span class="pname">Trico+ 250g</span><span class="pprice">$20.600</span></li>
+        </ul>
+        <div class="card-actions">
+          <a class="btn btn-wa btn-sm btn-block" href="https://wa.me/5492914369675?text=Hola%20Marciane!%20Quiero%20consultar%20por%20fertilizantes%20y%20aditivos" target="_blank" rel="noopener">Consultar fertilizantes</a>
+          <a class="btn btn-ghost btn-sm btn-block" href="https://wa.me/c/5492914369675" target="_blank" rel="noopener">Ver catálogo completo</a>
+        </div>
+      </article>
+
+      <!-- Carpas y combos indoor -->
+      <article class="card reveal">
+        <div class="card-ico">⛺</div>
+        <h3>Carpas y combos indoor</h3>
+        <p class="card-desc">Armá tu indoor de cero. Combos completos y carpas en todas las medidas.</p>
+        <div class="tag-list">
+          <span class="tag">60x60</span><span class="tag">80x80</span><span class="tag">100x100</span>
+          <span class="tag">120x120</span><span class="tag">160x80</span><span class="tag">240x120</span>
+        </div>
+        <ul class="plist">
+          <li><span class="pname">Combo Indoor Start</span><span class="todo">[COMPLETAR]</span></li>
+          <li><span class="pname">Combo Cultivo Plus</span><span class="todo">[COMPLETAR]</span></li>
+          <li><span class="pname">Combo Full Power</span><span class="todo">[COMPLETAR]</span></li>
+          <li><span class="pname">Carpas (según medida)</span><span class="todo">[COMPLETAR]</span></li>
+        </ul>
+        <div class="card-actions">
+          <a class="btn btn-wa btn-sm btn-block" href="https://wa.me/5492914369675?text=Hola%20Marciane!%20Quiero%20consultar%20por%20carpas%20y%20combos%20indoor" target="_blank" rel="noopener">Consultar indoor</a>
+          <a class="btn btn-ghost btn-sm btn-block" href="https://wa.me/c/5492914369675" target="_blank" rel="noopener">Ver catálogo completo</a>
+        </div>
+      </article>
+
+      <!-- Iluminación -->
+      <article class="card reveal">
+        <div class="card-ico">💡</div>
+        <h3>Iluminación</h3>
+        <p class="card-desc">Paneles LED full spectrum para todas las etapas.</p>
+        <div class="tag-list">
+          <span class="tag">LED full spectrum</span>
+          <span class="tag">Samsung 200W</span><span class="tag">300W</span>
+          <span class="tag">400W</span><span class="tag">600W</span>
+        </div>
+        <ul class="plist">
+          <li><span class="pname">Paneles LED full spectrum</span><span class="todo">[COMPLETAR]</span></li>
+          <li><span class="pname">Paneles Samsung 200W / 300W / 400W / 600W</span><span class="todo">[COMPLETAR]</span></li>
+        </ul>
+        <div class="card-actions">
+          <a class="btn btn-wa btn-sm btn-block" href="https://wa.me/5492914369675?text=Hola%20Marciane!%20Quiero%20consultar%20por%20iluminacion%20LED" target="_blank" rel="noopener">Consultar iluminación</a>
+          <a class="btn btn-ghost btn-sm btn-block" href="https://wa.me/c/5492914369675" target="_blank" rel="noopener">Ver catálogo completo</a>
+        </div>
+      </article>
+
+      <!-- Sustratos y medición -->
+      <article class="card reveal">
+        <div class="card-ico">🌱</div>
+        <h3>Sustratos y medición</h3>
+        <p class="card-desc">La base de tu cultivo y las herramientas para controlar el pH.</p>
+        <div class="tag-list">
+          <span class="tag">Klasmann TS3</span><span class="tag">Carluccio Cocomix</span>
+          <span class="tag">Fibra de coco</span><span class="tag">pH-metro digital</span>
+          <span class="tag">Kit de gotas</span><span class="tag">pH Up / Down</span>
+        </div>
+        <ul class="plist">
+          <li><span class="pname">Sustratos (Klasmann, Carluccio, coco)</span><span class="todo">[COMPLETAR]</span></li>
+          <li><span class="pname">pH-metros digitales y kits de gotas</span><span class="todo">[COMPLETAR]</span></li>
+          <li><span class="pname">pH Up / pH Down</span><span class="todo">[COMPLETAR]</span></li>
+        </ul>
+        <div class="card-actions">
+          <a class="btn btn-wa btn-sm btn-block" href="https://wa.me/5492914369675?text=Hola%20Marciane!%20Quiero%20consultar%20por%20sustratos%20y%20medicion" target="_blank" rel="noopener">Consultar sustratos</a>
+          <a class="btn btn-ghost btn-sm btn-block" href="https://wa.me/c/5492914369675" target="_blank" rel="noopener">Ver catálogo completo</a>
+        </div>
+      </article>
+
+      <!-- Tarjeta CTA catálogo -->
+      <article class="card reveal" style="justify-content:center;align-items:flex-start;background:linear-gradient(160deg,var(--surface-2),var(--bg-3));border-color:var(--border-neon)">
+        <div class="card-ico">👽</div>
+        <h3>¿No encontrás algo?</h3>
+        <p class="card-desc">Tenemos muchos más productos en el local. Escribinos y te lo conseguimos a la velocidad de la luz.</p>
+        <div class="card-actions">
+          <a class="btn btn-neon btn-sm btn-block" href="https://wa.me/c/5492914369675" target="_blank" rel="noopener">Ver catálogo completo 🛸</a>
+          <a class="btn btn-ghost btn-sm btn-block" href="https://wa.me/5492914369675?text=Hola%20Marciane!%20Quiero%20hacer%20una%20consulta" target="_blank" rel="noopener">Hacer una consulta</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMBOS INDOOR ============ -->
+<section class="section combos" id="combos">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Producto estrella</span>
+      <h2>Combos indoor · listos para arrancar 🚀</h2>
+      <p>Carpa + panel LED + coolers + poleas y timer de regalo. Elegís el combo, lo armamos con vos y te lo explicamos punto por punto.</p>
+    </div>
+
+    <div class="combo-grid">
+
+      <!-- Indoor Start -->
+      <article class="combo reveal">
+        <div class="combo-media">
+          <!-- IMG: combo indoor de entrada (carpa + LED chico) -->
+          <div class="ph">
+            <span class="ph-ico">🛸</span>
+            <span>FOTO: combo Indoor Start</span>
+            <span class="ph-tag">Placeholder</span>
+          </div>
+        </div>
+        <div class="combo-body">
+          <h3>Indoor Start</h3>
+          <div class="combo-tier">Para arrancar</div>
+          <ul>
+            <li>Carpa de cultivo</li>
+            <li>Panel LED full spectrum</li>
+            <li>Cooler para ventilación</li>
+            <li>Poleas regulables</li>
+            <li>Timer de regalo</li>
+          </ul>
+          <div class="combo-price">Precio: [COMPLETAR]</div>
+          <a class="btn btn-wa btn-sm btn-block" href="https://wa.me/5492914369675?text=Hola%20Marciane!%20Quiero%20info%20del%20combo%20Indoor%20Start" target="_blank" rel="noopener">Quiero este combo</a>
+        </div>
+      </article>
+
+      <!-- Cultivo Plus (destacado) -->
+      <article class="combo featured reveal">
+        <div class="combo-media">
+          <span class="featured-flag">Más elegido</span>
+          <!-- IMG: combo indoor intermedio -->
+          <div class="ph">
+            <span class="ph-ico">🛸</span>
+            <span>FOTO: combo Cultivo Plus</span>
+            <span class="ph-tag">Placeholder</span>
+          </div>
+        </div>
+        <div class="combo-body">
+          <h3>Cultivo Plus</h3>
+          <div class="combo-tier">El equilibrado</div>
+          <ul>
+            <li>Carpa de mayor tamaño</li>
+            <li>Panel LED de más potencia</li>
+            <li>Coolers de entrada y salida</li>
+            <li>Poleas regulables</li>
+            <li>Timer de regalo</li>
+          </ul>
+          <div class="combo-price">Precio: [COMPLETAR]</div>
+          <a class="btn btn-neon btn-sm btn-block" href="https://wa.me/5492914369675?text=Hola%20Marciane!%20Quiero%20info%20del%20combo%20Cultivo%20Plus" target="_blank" rel="noopener">Quiero este combo</a>
+        </div>
+      </article>
+
+      <!-- Full Power -->
+      <article class="combo reveal">
+        <div class="combo-media">
+          <!-- IMG: combo indoor completo full power -->
+          <div class="ph">
+            <span class="ph-ico">🛸</span>
+            <span>FOTO: combo Full Power</span>
+            <span class="ph-tag">Placeholder</span>
+          </div>
+        </div>
+        <div class="combo-body">
+          <h3>Full Power</h3>
+          <div class="combo-tier">A la velocidad de la luz</div>
+          <ul>
+            <li>Carpa grande</li>
+            <li>Panel LED de alta potencia</li>
+            <li>Set completo de coolers</li>
+            <li>Poleas regulables</li>
+            <li>Timer de regalo</li>
+          </ul>
+          <div class="combo-price">Precio: [COMPLETAR]</div>
+          <a class="btn btn-wa btn-sm btn-block" href="https://wa.me/5492914369675?text=Hola%20Marciane!%20Quiero%20info%20del%20combo%20Full%20Power" target="_blank" rel="noopener">Quiero este combo</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ ASESORAMIENTO ============ -->
+<section class="section" id="asesoramiento">
+  <div class="wrap">
+    <div class="aseso reveal">
+      <div class="alien">👽</div>
+      <h2>¿Arrancás de cero? Te armamos el cultivo a tu medida</h2>
+      <p>Asesoramiento personalizado para tu autocultivo indoor: qué carpa, qué LED, qué sustrato y qué nutrición según tu espacio y tu presupuesto. Sin vueltas y con onda.</p>
+      <a class="btn btn-neon" href="https://wa.me/5492914369675?text=Hola%20Marciane!%20Arranco%20de%20cero%20y%20quiero%20que%20me%20armen%20el%20cultivo" target="_blank" rel="noopener">
+        <svg class="wa-ico" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.3.6 4.5 1.8 6.4L3 29l7.3-2.2c1.8 1 3.9 1.5 5.7 1.5 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.7c-1.7 0-3.4-.5-4.9-1.4l-.4-.2-4.3 1.3 1.3-4.2-.3-.4a10 10 0 01-1.6-5.4C5.5 9.9 10.2 5.3 16 5.3S26.5 9.9 26.5 15.6 21.8 25.7 16 25.7zm5.8-7.5c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2c-.2.3-.8 1-1 1.2s-.4.2-.7 0c-.3-.2-1.4-.5-2.6-1.6-1-.8-1.6-1.9-1.8-2.2s0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.5s0-.4 0-.6c-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.2 3.3 5.3 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.2-.6-.4z"/></svg>
+        Pedí tu asesoramiento
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINANCIACIÓN ============ -->
+<section class="section" id="financiacion">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Financiación</span>
+      <h2>Comprá como te quede cómodo</h2>
+      <p>Nuestro diferencial de siempre: cuotas sin interés con tarjeta y descuento pagando en efectivo.</p>
+    </div>
+    <div class="fin-grid">
+      <div class="fin reveal">
+        <div class="fin-ico">💳</div>
+        <h3>1 y 3 cuotas</h3>
+        <p>Sin interés con tarjeta. <span style="color:var(--text-mute)">[CONFIRMAR: en IG también aparecen 6 cuotas.]</span></p>
+      </div>
+      <div class="fin reveal">
+        <div class="fin-ico">💵</div>
+        <h3>Efectivo</h3>
+        <p>Descuento especial pagando en efectivo. <span style="color:var(--text-mute)">[CONFIRMAR % de descuento.]</span></p>
+      </div>
+      <div class="fin reveal">
+        <div class="fin-ico">🤝</div>
+        <h3>Te asesoramos</h3>
+        <p>Consultanos la mejor opción para tu compra por WhatsApp y coordinamos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CÓMO LLEGAR ============ -->
+<section class="section" id="como-llegar">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Dónde estamos</span>
+      <h2>Pasá por el local 🛸</h2>
+      <p>Estamos en Bahía Blanca. Vení a ver los productos, te asesoramos en persona.</p>
+    </div>
+
+    <div class="llegar-grid">
+      <div class="info-box reveal">
+        <div class="info-row">
+          <span class="i-ico">📍</span>
+          <div>
+            <h4>Dirección</h4>
+            <p>Av. Arias 2092, Bahía Blanca, Buenos Aires <span style="color:var(--text-mute)">[CONFIRMAR altura]</span></p>
+          </div>
+        </div>
+        <div class="info-row">
+          <span class="i-ico">🕒</span>
+          <div>
+            <h4>Horarios</h4>
+            <ul class="hours">
+              <li><span>Lunes a sábado</span><span>10:00 – 13:00</span></li>
+              <li><span></span><span>17:00 – 20:30</span></li>
+            </ul>
+            <p style="color:var(--text-mute);font-size:.8rem;margin-top:4px">[CONFIRMAR: la ficha de WhatsApp dice hasta las 21:00]</p>
+          </div>
+        </div>
+        <div class="info-row">
+          <span class="i-ico">✉️</span>
+          <div>
+            <h4>Email</h4>
+            <a href="mailto:marcianegrow2023@gmail.com">marcianegrow2023@gmail.com</a>
+          </div>
+        </div>
+        <div class="info-row">
+          <span class="i-ico">💬</span>
+          <div>
+            <h4>WhatsApp</h4>
+            <a href="https://wa.me/5492914369675?text=Hola%20Marciane!%20Quiero%20hacer%20una%20consulta" target="_blank" rel="noopener">+54 9 291 436-9675</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-wrap reveal">
+        <!-- Mapa embebido de Google Maps sin API key -->
+        <iframe
+          src="https://www.google.com/maps?q=Av.+Arias+2092,+Bah%C3%ADa+Blanca,+Buenos+Aires&output=embed"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Mapa de Marciane Growshop en Av. Arias 2092, Bahía Blanca"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="foot-brand">
+          <svg class="logo" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M32 6c13 0 22 10 22 24 0 16-12 28-22 28S10 46 10 30C10 16 19 6 32 6z" fill="#39ff8a"/>
+            <ellipse cx="23" cy="34" rx="6.5" ry="9" fill="#0a0713" transform="rotate(-18 23 34)"/>
+            <ellipse cx="41" cy="34" rx="6.5" ry="9" fill="#0a0713" transform="rotate(18 41 34)"/>
+          </svg>
+          Marciane Growshop
+        </div>
+        <p>Te brindamos todo lo necesario para tu cultivo indoor en Bahía Blanca. Parafernalia, insumos, indoor y asesoramiento de verdad. 👽</p>
+      </div>
+
+      <div class="foot-col">
+        <h5>Seguinos</h5>
+        <ul class="foot-links">
+          <li>📸 <a href="https://www.instagram.com/marcianegrow/" target="_blank" rel="noopener">@marcianegrow</a></li>
+          <li>💬 <a href="https://wa.me/5492914369675?text=Hola%20Marciane!%20Quiero%20hacer%20una%20consulta" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li>🛸 <a href="https://wa.me/c/5492914369675" target="_blank" rel="noopener">Catálogo completo</a></li>
+          <li>✉️ <a href="mailto:marcianegrow2023@gmail.com">marcianegrow2023@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h5>Local</h5>
+        <ul class="foot-links">
+          <li>📍 <a href="https://www.google.com/maps?q=Av.+Arias+2092,+Bah%C3%ADa+Blanca" target="_blank" rel="noopener">Av. Arias 2092, Bahía Blanca</a></li>
+          <li>🕒 <span>Lun a Sáb · 10–13 y 17–20:30</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="legal">
+      <span class="edad"><span class="b18">+18</span> Venta de insumos de jardinería y parafernalia. Solo para mayores de 18 años. <span style="color:var(--text-mute);font-weight:400">[CONFIRMAR texto con el dueño]</span></span>
+      <span>© <span id="year">2026</span> Marciane Growshop · Bahía Blanca, Buenos Aires · Hecho con onda marciana.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Botón flotante WhatsApp -->
+<a class="fab" href="https://wa.me/5492914369675?text=Hola%20Marciane!%20Quiero%20hacer%20una%20consulta" target="_blank" rel="noopener" aria-label="Consultar por WhatsApp">
+  <svg class="wa-ico" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.3.6 4.5 1.8 6.4L3 29l7.3-2.2c1.8 1 3.9 1.5 5.7 1.5 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.7c-1.7 0-3.4-.5-4.9-1.4l-.4-.2-4.3 1.3 1.3-4.2-.3-.4a10 10 0 01-1.6-5.4C5.5 9.9 10.2 5.3 16 5.3S26.5 9.9 26.5 15.6 21.8 25.7 16 25.7zm5.8-7.5c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2c-.2.3-.8 1-1 1.2s-.4.2-.7 0c-.3-.2-1.4-.5-2.6-1.6-1-.8-1.6-1.9-1.8-2.2s0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.5s0-.4 0-.6c-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.2 3.3 5.3 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.2-.6-.4z"/></svg>
+  <span class="fab-txt">Consultanos</span>
+</a>
+
+<!-- JSON-LD schema.org Store -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Marciane Growshop",
+  "description": "Growshop en Bahía Blanca: parafernalia, fertilizantes, carpas y combos indoor, con financiación en cuotas sin interés y asesoramiento personalizado.",
+  "image": "https://www.instagram.com/marcianegrow/",
+  "telephone": "+5492914369675",
+  "email": "marcianegrow2023@gmail.com",
+  "currenciesAccepted": "ARS",
+  "paymentAccepted": "Efectivo, Tarjeta de crédito",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Arias 2092",
+    "addressLocality": "Bahía Blanca",
+    "addressRegion": "Buenos Aires",
+    "addressCountry": "AR"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "10:00",
+      "closes": "13:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "17:00",
+      "closes": "20:30"
+    }
+  ],
+  "sameAs": [
+    "https://www.instagram.com/marcianegrow/",
+    "https://wa.me/5492914369675"
+  ]
+}
+</script>
+
+<!-- JS propio: fade-in al scrollear + año -->
+<script>
+(function () {
+  "use strict";
+
+  // Año dinámico en el footer
+  var yearEl = document.getElementById("year");
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
+
+  // Fade-in al scrollear con IntersectionObserver
+  var reveals = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries, obs) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in");
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+
+    reveals.forEach(function (el) { io.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add("in"); });
+  }
+})();
+</script>
+
+
+<!-- aviso de demo conceptual -->
+<style>
+#demo-badge{position:fixed;right:12px;bottom:12px;z-index:99999;background:rgba(17,17,17,.86);color:#f2f2f2;
+font:500 11px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:8px 12px;border-radius:999px;
+max-width:min(92vw,360px);box-shadow:0 4px 16px rgba(0,0,0,.28);backdrop-filter:blur(6px);text-align:center}
+#demo-badge a{color:#8ab4ff;text-decoration:none}
+@media print{#demo-badge{display:none}}
+</style>
+<div id="demo-badge">Demo conceptual sin relacion oficial con el negocio &middot; disenada por
+<a href="https://github.com/pedrogalbusera-code" target="_blank" rel="noopener">Pedro Galbusera</a></div>
+</body>
+</html>
