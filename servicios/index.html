@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pedro Galbusera · Automatizo lo que tu negocio hace a mano</title>
+<meta name="description" content="Sitios web, automatización de tareas repetitivas y bots para comercios y PyMEs. Diagnóstico sin cargo. Ituzaingó, Buenos Aires.">
+<meta property="og:title" content="Automatizo lo que tu negocio hace a mano">
+<meta property="og:description" content="Si alguien de tu equipo hace todos los días la misma tarea a mano, probablemente no haga falta. Diagnóstico sin cargo.">
+<style>
+  :root{
+    --bg:#0f1113; --panel:#16191d; --panel2:#1b1f24; --line:#262b31;
+    --tx:#e9ecef; --dim:#9aa4ae; --accent:#f0a24b; --green:#7bd08a;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--tx);
+    font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased}
+  .wrap{max-width:900px;margin:0 auto;padding:0 20px}
+  a{color:var(--accent)}
+
+  /* HERO */
+  header{padding:64px 0 44px;border-bottom:1px solid var(--line)}
+  .eyebrow{color:var(--accent);font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;margin:0 0 16px}
+  h1{font-size:clamp(30px,5.4vw,46px);line-height:1.12;margin:0 0 18px;letter-spacing:-.025em}
+  .lead{color:var(--dim);font-size:clamp(16px,2.3vw,19px);max-width:60ch;margin:0 0 28px}
+  .cta{display:inline-flex;align-items:center;gap:9px;background:var(--accent);color:#181206;
+    font-weight:700;font-size:16px;padding:13px 24px;border-radius:10px;text-decoration:none;
+    transition:transform .15s,filter .15s}
+  .cta:hover{transform:translateY(-1px);filter:brightness(1.07)}
+  .cta.ghost{background:transparent;color:var(--tx);border:1px solid var(--line);font-weight:600;margin-left:10px}
+  .cta.ghost:hover{border-color:#3d454e}
+
+  h2{font-size:clamp(21px,3.2vw,27px);letter-spacing:-.015em;margin:0 0 8px}
+  section{padding:52px 0;border-bottom:1px solid var(--line)}
+  .sub{color:var(--dim);margin:0 0 26px;max-width:64ch}
+
+  /* SINTOMAS */
+  .sint{display:grid;gap:12px}
+  @media(min-width:720px){.sint{grid-template-columns:1fr 1fr}}
+  .s{background:var(--panel);border:1px solid var(--line);border-left:2px solid var(--accent);
+    border-radius:0 10px 10px 0;padding:16px 18px}
+  .s b{display:block;font-size:15.5px;margin-bottom:3px}
+  .s span{color:var(--dim);font-size:14.5px}
+
+  /* SERVICIOS */
+  .serv{display:grid;gap:16px}
+  @media(min-width:720px){.serv{grid-template-columns:1fr 1fr}}
+  .c{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px;
+    transition:border-color .18s,transform .18s}
+  .c:hover{border-color:#3a424b;transform:translateY(-2px)}
+  .c h3{margin:0 0 8px;font-size:18px;letter-spacing:-.01em}
+  .c p{margin:0 0 12px;color:var(--dim);font-size:15px}
+  .ej{border-top:1px dashed #2e343b;padding-top:11px;font-size:13.5px;color:#b6bfc8}
+  .ej b{color:var(--green);font-weight:600}
+
+  /* PASOS */
+  .pasos{counter-reset:p;display:grid;gap:18px}
+  @media(min-width:720px){.pasos{grid-template-columns:repeat(3,1fr)}}
+  .p{counter-increment:p;position:relative;padding-top:44px}
+  .p::before{content:counter(p);position:absolute;top:0;left:0;width:32px;height:32px;
+    display:grid;place-items:center;border-radius:50%;background:var(--panel2);
+    border:1px solid var(--line);color:var(--accent);font-weight:700;font-size:15px}
+  .p h4{margin:0 0 6px;font-size:16.5px}
+  .p p{margin:0;color:var(--dim);font-size:15px}
+
+  /* PRUEBA */
+  .prueba{display:grid;gap:16px}
+  @media(min-width:720px){.prueba{grid-template-columns:1fr 1fr}}
+  .caso{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .caso h3{margin:0 0 6px;font-size:17.5px}
+  .caso p{margin:0 0 12px;color:var(--dim);font-size:15px}
+  .caso a{font-weight:600;text-decoration:none;font-size:15px}
+  .caso a:hover{text-decoration:underline}
+
+  /* QUIEN */
+  .quien{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:24px}
+  .quien p{margin:0 0 12px;color:var(--dim)}
+  .quien p:last-child{margin:0}
+  .quien strong{color:var(--tx)}
+
+  /* CIERRE */
+  .cierre{text-align:center;padding:60px 0 24px;border:0}
+  .cierre h2{margin-bottom:12px}
+  .cierre p{color:var(--dim);max-width:52ch;margin:0 auto 26px}
+  footer{padding:26px 0 46px;color:var(--dim);font-size:14.5px;text-align:center}
+  footer a{text-decoration:none}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <p class="eyebrow">Pedro Galbusera · Ituzaingó, Buenos Aires</p>
+    <h1>Automatizo lo que tu negocio hace a mano.</h1>
+    <p class="lead">Si alguien de tu equipo dedica horas todas las semanas a copiar datos, armar el mismo informe o responder la misma pregunta por vigésima vez, eso probablemente no haga falta. Yo lo resuelvo y te devuelvo esas horas.</p>
+    <a class="cta" href="https://wa.me/5491139459264?text=Hola%20Pedro%2C%20vi%20tu%20p%C3%A1gina%20y%20quer%C3%ADa%20consultarte." target="_blank" rel="noopener">Contame tu caso por WhatsApp</a>
+    <a class="cta ghost" href="#servicios">Ver qué hago</a>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>¿Te suena alguna de estas?</h2>
+    <p class="sub">No hace falta que sepas qué se puede automatizar. Si te pasa alguna de estas cosas, hay algo para hacer.</p>
+    <div class="sint">
+      <div class="s"><b>Pasás datos de un lado a otro</b><span>De un mail a una planilla, de la planilla al sistema, del sistema a otro informe. Todos los días lo mismo.</span></div>
+      <div class="s"><b>Respondés siempre las mismas preguntas</b><span>Precios, horarios, cómo llegar, si hay stock. Ocupa el día de alguien que debería estar vendiendo.</span></div>
+      <div class="s"><b>Armás un informe a mano cada semana</b><span>Ventas, cobranzas, seguimiento. Dos horas de copiar y pegar para algo que se puede generar solo.</span></div>
+      <div class="s"><b>Pagás comisión por cada venta</b><span>Una app se queda con un porcentaje de cada pedido que igual iba a ser tuyo.</span></div>
+      <div class="s"><b>Los clientes no te encuentran</b><span>Tenés reseñas, tenés años de trabajo, y en Google aparece un directorio o tu competencia.</span></div>
+      <div class="s"><b>Todo depende de una persona</b><span>Si falta esa persona, el proceso se frena. Nadie más sabe hacerlo.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="servicios">
+  <div class="wrap">
+    <h2>Qué hago</h2>
+    <p class="sub">Solo listo cosas que ya ejecuté. Si me pedís algo que no está acá, te digo si puedo o no — no cobro por aprender a tu costa.</p>
+    <div class="serv">
+
+      <div class="c">
+        <h3>🌐 Sitios web que venden</h3>
+        <p>Un sitio rápido, que se ve bien en el celular, aparece en Google y toma pedidos o consultas directo por WhatsApp. Con dominio propio y sin comisión de intermediarios.</p>
+        <div class="ej"><b>Hecho:</b> maperque.com.ar, una pizzería de Castelar que hoy recibe los pedidos en su propio WhatsApp.</div>
+      </div>
+
+      <div class="c">
+        <h3>⚙️ Automatización de tareas repetitivas</h3>
+        <p>Procesamiento de archivos y planillas, informes que se arman solos, datos que pasan de un lado a otro sin que nadie los copie. Todo lo que hoy hace una persona con el mouse.</p>
+        <div class="ej"><b>Hecho:</b> un proceso de generación y edición de video que producía cada pieza a mano; ahora se hace solo.</div>
+      </div>
+
+      <div class="c">
+        <h3>💬 Avisos y respuestas automáticas</h3>
+        <p>Bots que responden lo de siempre, avisan cuando pasa algo importante o registran cada consulta que entra. WhatsApp, Discord, mail.</p>
+        <div class="ej"><b>Hecho:</b> un bot que detecta cuando arranca una transmisión y avisa al instante a todo el canal.</div>
+      </div>
+
+      <div class="c">
+        <h3>🧭 Diagnóstico y puesta en orden</h3>
+        <p>A veces el problema no es la herramienta sino que nadie miró el proceso completo. Lo relevo, te digo dónde se pierde el tiempo y qué conviene resolver primero — aunque la respuesta sea que no me necesitás.</p>
+        <div class="ej"><b>Incluido:</b> el primer relevamiento no se cobra.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Cómo trabajamos</h2>
+    <p class="sub">Sin vueltas y sin presupuestos eternos.</p>
+    <div class="pasos">
+      <div class="p">
+        <h4>Me contás qué te molesta</h4>
+        <p>Una charla de veinte minutos, por WhatsApp o presencial si estás en la zona. No hace falta que sepas qué se puede automatizar: para eso estoy yo.</p>
+      </div>
+      <div class="p">
+        <h4>Te digo qué se puede y qué sale</h4>
+        <p>Precio cerrado y plazo antes de empezar. Si lo que necesitás no lo puedo resolver bien, te lo digo en esa misma charla.</p>
+      </div>
+      <div class="p">
+        <h4>Lo entrego funcionando</h4>
+        <p>Andando y probado, no un archivo suelto. Te explico cómo usarlo y queda documentado para que no dependas de mí.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Por qué puedo hacer esto rápido</h2>
+    <p class="sub">Trabajo con herramientas de inteligencia artificial y sé dirigirlas. Eso significa entregas en días donde una agencia cotiza meses — y a un precio que un comercio o una PyME puede pagar. Estas dos son la prueba:</p>
+    <div class="prueba">
+      <div class="caso">
+        <h3>Un videojuego completo en 11 días</h3>
+        <p>Diseñé y dirigí de punta a punta un juego con 13 personajes, 114 objetos, 7 jefes y ~10.000 líneas de código, con 25 herramientas propias para verificar que todo funcionara. Es la prueba de que puedo sostener un proyecto complejo sin que se desarme.</p>
+        <a href="https://github.com/pedrogalbusera-code/granja-muerta" target="_blank" rel="noopener">Ver el proyecto completo →</a>
+      </div>
+      <div class="caso">
+        <h3>Sitios entregados y en producción</h3>
+        <p>Sitios reales, con dominio propio y andando, más propuestas hechas para comercios de la zona. Los podés abrir ahora mismo desde el celular y ver cuánto tardan en cargar.</p>
+        <a href="https://pedrogalbusera-code.github.io/webs-para-negocios/" target="_blank" rel="noopener">Ver los sitios →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Quién soy</h2>
+    <div class="quien">
+      <p>Me llamo <strong>Pedro Galbusera</strong>, tengo 20 años, vivo en Ituzaingó y estudio la Tecnicatura Universitaria en Programación en la UTN de Haedo.</p>
+      <p>Trabajo hace dos años en un comercio de la zona, muchas veces a cargo del local. Ahí aprendí algo que no se aprende estudiando: <strong>cómo se pierde plata en el día a día de un negocio</strong> — pedidos que no entran, preguntas que se repiten, comisiones que se pagan sin pensarlas. El primer sitio que vendí fue el de ese mismo local, porque le vi el problema desde adentro.</p>
+      <p>No te voy a decir que revoluciono nada. Te voy a decir qué se puede resolver, cuánto sale y para cuándo lo tenés. Y si no lo puedo hacer bien, te lo digo antes de cobrarte.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cierre">
+  <div class="wrap">
+    <h2>Contame qué te está haciendo perder tiempo</h2>
+    <p>El primer relevamiento no se cobra. Si de esa charla sale que no necesitás nada, también es una respuesta útil.</p>
+    <a class="cta" href="https://wa.me/5491139459264?text=Hola%20Pedro%2C%20vi%20tu%20p%C3%A1gina%20y%20quer%C3%ADa%20consultarte." target="_blank" rel="noopener">Escribime por WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="mailto:pedrogalbusera@gmail.com">pedrogalbusera@gmail.com</a> ·
+    <a href="https://github.com/pedrogalbusera-code" target="_blank" rel="noopener">GitHub</a> ·
+    Ituzaingó, Buenos Aires · Trabajo presencial en Zona Oeste y remoto para el resto del país.
+  </div>
+</footer>
+
+</body>
+</html>
