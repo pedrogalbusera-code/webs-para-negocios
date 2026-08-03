@@ -104,7 +104,7 @@ footer .fine{margin-top:22px;font-size:13px;color:#8fa4b8}
 <main>
 <div class="wrap">
 
-  <p class="lead">Tres proyectos terminados, con el código y la documentación públicos. En los tres el trabajo fue el mismo: <b>entender un proceso, encontrar dónde falla y construir lo que lo resuelve</b>, verificando cada paso en vez de suponer que funcionó.</p>
+  <p class="lead">Cuatro proyectos con el código y la documentación públicos. En todos el trabajo fue el mismo: <b>entender un proceso, encontrar dónde falla y construir lo que lo resuelve</b>, verificando cada paso en vez de suponer que funcionó.</p>
 
   <section class="proj">
     <span class="tagline">01 · Dirección de proyecto con IA</span>
@@ -131,8 +131,35 @@ footer .fine{margin-top:22px;font-size:13px;color:#8fa4b8}
     <a class="repo" href="https://github.com/pedrogalbusera-code/granja-muerta">Ver el repositorio →</a>
   </section>
 
+  <section class="proj" id="filtro-de-listas">
+    <span class="tagline">02 · Automatización de procesos</span>
+    <h2>Filtro de Listas — limpieza y priorización de contactos</h2>
+    <div class="meta">Workflow que limpia y prioriza listas de contactos de un call center · n8n, JavaScript, Node.js, Python · en curso</div>
+
+    <div class="nums">
+      <div class="n"><div class="v">200</div><div class="l">contactos procesados</div></div>
+      <div class="n"><div class="v">86</div><div class="l">llamables de 200</div></div>
+      <div class="n"><div class="v">114</div><div class="l">descartados con motivo</div></div>
+      <div class="n"><div class="v">7,6 h</div><div class="l">de operador ahorradas</div></div>
+    </div>
+
+    <div class="lb">La situación</div>
+    <p>Un call center recibe listas de contactos y las llama de arriba a abajo: duplicados, teléfonos inválidos, gente fuera de zona. Antes de marcar un número ya perdió tiempo en contactos que nunca iban a conectar. El entregable no es la lista limpia: es el número — cuántos entraron, cuántos quedan útiles y cuánto tiempo se ahorra, con el supuesto a la vista.</p>
+
+    <div class="lb">Lo que encontré</div>
+    <ul>
+      <li>De 200 contactos de prueba, <b>82 no tenían teléfono utilizable</b>, 14 estaban duplicados y 39 quedaban fuera de zona. Solo <b>86 valían la pena llamar</b>; el resto son 7,6 horas de operador en llamadas que no conectan.</li>
+      <li>Mi validador de CUIL daba <b>200 de 200 válidos</b> y estaba mal: calibrado contra el generador del archivo de prueba, no contra la regla real de AFIP. La corrección bajó los typos de un dígito no detectados <b>de 1,58% a 0%</b>.</li>
+      <li>La suite de regresión daba todo verde mientras varios verificadores leían corridas viejas en vez de ejecutar el pipeline. Rompí una regla a propósito, seguía en verde, y ahí lo corregí y lo probé de verdad.</li>
+    </ul>
+
+    <div class="lb">Qué construí</div>
+    <p>Un workflow de n8n con <b>10 nodos encadenados</b>, uno por responsabilidad: normaliza teléfonos, valida CUILs por módulo 11, deduplica por CUIL y por teléfono, marca zona y antigüedad, asigna un <b>puntaje explicable por fila</b> (cada punto deja su motivo) y genera un reporte de impacto. Ninguna fila se pierde en silencio: un descarte es una etiqueta, no una eliminación. De red de seguridad: verificadores en Python, comparación contra <i>golden files</i> por SHA-256 y archivos adversarios escritos para romperlo, que dejaron 13 hallazgos documentados. Los 200 contactos son sintéticos: una lista real no se sube a un repo público (Ley 25.326).</p>
+    <a class="repo" href="https://github.com/pedrogalbusera-code/filtro-de-listas">Ver el repositorio →</a>
+  </section>
+
   <section class="proj">
-    <span class="tagline">02 · Análisis de proceso y solución en producción</span>
+    <span class="tagline">03 · Análisis de proceso y solución en producción</span>
     <h2>Ma Perque? — pizzería en Castelar</h2>
     <div class="meta">Relevamiento del circuito de pedidos y desarrollo de la solución · cliente real, en producción</div>
 
@@ -156,7 +183,7 @@ footer .fine{margin-top:22px;font-size:13px;color:#8fa4b8}
   </section>
 
   <section class="proj">
-    <span class="tagline">03 · Desarrollo para comercios</span>
+    <span class="tagline">04 · Desarrollo para comercios</span>
     <h2>Sitios web para negocios de zona oeste</h2>
     <div class="meta">Proyecto propio · relevamiento, desarrollo, entrega y venta · 2026 – actualidad</div>
     <ul>
